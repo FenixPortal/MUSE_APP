@@ -29,6 +29,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'haml-rails', '~> 0.9.0'
-gem 'simple_form', '~> 3.2', '>= 3.2.1'
+gem 'simple_form', github: 'kesha-antonov/simple_form', branch: 'rails-5-0'
 gem 'devise', '~> 4.2'
 gem 'paperclip', '~> 5.0'
