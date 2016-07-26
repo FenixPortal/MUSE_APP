@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/IndyGems/simple_form_materialize-rails-5.git
+  revision: 9845b9d8993d538c3aa08cdd7624d9d05a1293a9
+  specs:
+    simple_form-materialize (0.0.1)
+      rails (~> 5.0.0)
+
+GIT
   remote: git://github.com/kesha-antonov/simple_form.git
   revision: a1561c930f3be279f3580c2510f2555f2e67a4f4
   branch: rails-5-0
@@ -103,6 +110,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    materialize-sass (0.97.6)
+      sass (~> 3.3)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -211,11 +220,13 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  materialize-sass
   paperclip (~> 5.0)
   puma (~> 3.0)
   rails (~> 5.0.0)
   sass-rails (~> 5.0)
   simple_form!
+  simple_form-materialize!
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3

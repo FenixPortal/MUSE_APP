@@ -1,6 +1,7 @@
 #-*-coding:utf-8-*-
 class PostsController < ApplicationController
   before_action :find_post, except: [:index, :new, :create]
+  before_action :authenticate_user!, except: [:index, :show]
   def index
     @posts = Post.all.order("created_at DESC")
   end
@@ -9,11 +10,11 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @post = current_user.posts.build
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
     if @post.save
       redirect_to @post
     else
@@ -43,6 +44,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :link, :description)
+      params.require(:post).permit(:title, :link, :description, :user_id)
     end
 end
