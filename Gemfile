@@ -14,6 +14,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
+  gem 'pry'
+  gem 'pry-rails'
   gem 'byebug', platform: :mri
 end
 
@@ -25,7 +27,6 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
 
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'haml-rails', '~> 0.9.0'

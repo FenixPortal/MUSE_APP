@@ -5,4 +5,13 @@
     =f.input :link
   .input-field
     =f.input :description, input_html: { class: "materialize-textarea"}
+  %br/
+  .file-field.input-field.gallery_picture
+    .btn
+      %span Image
+      =f.input :image, label: false
+    .file-path-wrapper
+      %input.file-path.validate{:type => "text"}/
+  %br/
+  %br/
   =f.button :submit, class: "waves-effect waves-light btn"
