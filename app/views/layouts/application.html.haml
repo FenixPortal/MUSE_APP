@@ -1,0 +1,42 @@
+!!!
+%html
+%head
+  %title Muse
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+  = stylesheet_link_tag   "https://fonts.googleapis.com/icon?family=Material+Icons"
+  %link{:rel => "stylesheet", :href => "http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"}
+  %link{:rel => "stylesheet", :href => "http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"}
+  = csrf_meta_tags
+%body
+  %header
+    .navbar-fixed
+      %nav.grey.darken-1
+        .nav-wrapper.wrapper.clearfix
+          #logo
+            =link_to root_path, class: "brand-logo" do 
+              Muse
+              %i.material-icons
+                stars
+          %ul.right.hide-on-med-and-down
+            - if user_signed_in?
+              %li
+                = link_to edit_user_registration_path, title: "Edit User" do
+                  %i.material-icons assignment_ind
+              %li
+                = link_to new_post_path, title: "Add new Inspiration" do
+                  %i.material-icons note_add
+              %li
+                = link_to destroy_user_session_path, method: :delete, title: "Sign Out" do
+                  %i.material-icons language
+            -else
+              %li
+                = link_to new_user_session_path, title: "Sign in" do
+                  %i.material-icons playlist_add
+              %li
+                = link_to new_user_registration_path, title: "Sign Up" do
+                  %i.material-icons person_pin
+  %p.notice= notice
+  %p.alert= alert
+  .wrapper
+    = yield
+  = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'

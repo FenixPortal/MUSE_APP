@@ -1,1 +1,52 @@
+/*
+ *= require_self
+ */
+
 @import "materialize";
+
+body {
+  font-family: "Proxima Nova";
+  font-weight: 100;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+header {
+  width: 100% !important;
+  // padding: 2rem 0;
+  border-bottom: 1px solid #E4E4E4 !important;
+  #logo {
+    float: left;
+    font-size: 1.75rem;
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        color: #50A7C7;
+      }
+      i{
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+@import 'home';
+@import 'posts';
