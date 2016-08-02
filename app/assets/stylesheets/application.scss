@@ -57,6 +57,16 @@ header {
   }
 }
 
+.powerred-text{
+  color:  #810000 !important;
+  text-shadow: #503C3C;
+}
+
+.powerred-grey-text{
+  color: #303030;
+  text-shadow: #503C3C;
+}
+
 .input-field label.active {
   font-size: 1.1em !important;
   -webkit-transform: translateY(-140%);
