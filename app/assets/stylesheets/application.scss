@@ -42,7 +42,7 @@ header {
     float: left;
     font-size: 1.75rem;
     a {
-      color: white;
+      color: #e61b1b !important;
       text-decoration: none;
       &:hover {
         color: #50A7C7;
@@ -52,8 +52,16 @@ header {
       }
     }
   }
+  a{
+    color: #464646 !important;
+  }
 }
 
+.input-field label.active {
+  font-size: 1.1em !important;
+  -webkit-transform: translateY(-140%);
+  transform: translateY(-140%);
+}
 
 @import 'home';
 @import 'posts';

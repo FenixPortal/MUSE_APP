@@ -6,11 +6,15 @@
   = stylesheet_link_tag   "https://fonts.googleapis.com/icon?family=Material+Icons"
   %link{:rel => "stylesheet", :href => "http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"}
   %link{:rel => "stylesheet", :href => "http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"}
+  / Compiled and minified CSS
+  = stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"
+  / Compiled and minified JavaScript
+  = stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"
   = csrf_meta_tags
 %body
   %header
     .navbar-fixed
-      %nav.grey.darken-1
+      %nav.amber.lighten-3
         .nav-wrapper.wrapper.clearfix
           #logo
             =link_to root_path, class: "brand-logo" do 

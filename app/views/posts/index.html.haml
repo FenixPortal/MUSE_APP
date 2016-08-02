@@ -11,26 +11,38 @@
     %br/
     %span
       Share your inspiration and see what's inspiring others.
-.container-fluid
-  #posts.transitions-enabled
+.container
+  / #posts.transitions-enabled
+  .col.m4
     -@posts.each do |post|
-      .post.card.sticky-action
-        .card-image.waves-effect.waves-block.waves-light
+      .card.horizontal
+        .card-image
           =link_to (image_tag post.image.url(:small)), post, class: "activator"
-        .card-content
-          %span.card-title.activator.grey-text.text-darken-4
-            .col.s2
+        .card-stacked
+          .card-content
+            %span.card-title.grey-text.text-darken-4
               .title
                 =post.title
-                %i.material-icons.right more_vert
-        .card-action
-          %span
-            %i.fa.fa-comments-o
-            =post.comments.count
-          %span
-            %i.fa.fa-thumbs-o-up
-            =post.get_likes.size
-        .card-reveal
-          %span.card-title.grey-text.text-darken-4
-            %i.material-icons.right close
-            %p{style: "font-size: 14px; text-align: justify;"}=post.description
+          .card-action
+            %a{:href => "#"} This is a link
+      / .card.horizontal
+      /   .card-image.waves-effect.waves-block.waves-light
+      /     =link_to (image_tag post.image.url(:small)), post, class: "activator"
+      /   .card-stacked
+      /     .card-content
+      /       %span.card-title.activator.grey-text.text-darken-4
+      /         .col.s2
+      /           .title
+      /             =post.title
+      /             %i.material-icons.right more_vert
+      /     .card-action
+      /       %span
+      /         %i.fa.fa-comments-o
+      /         =post.comments.count
+      /       %span
+      /         %i.fa.fa-thumbs-o-up
+      /         =post.get_likes.size
+      /     .card-reveal
+      /       %span.card-title.grey-text.text-darken-4
+      /         %i.material-icons.right close
+      /         %p{style: "font-size: 14px; text-align: justify;"}=post.description
